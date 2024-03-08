@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Zoo</title>
+   
+    
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-paw"></i>Animals World</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#fauna">Animals</a>
+            <a href="#contact">Contact Us</a>
+          
+            
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- home -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <div class="blur">
+             <h3 >Welcome to the world of animals</h3>
+             </div>
+
+        </div>
+
+    </section>
+
+   
+
+    <!-- gallery -->
+
+    <section class="gallery" id="gallery">
+
+        <h2 class="heading">Gallery</h2>
+
+        <div class="slideshow-container">
+
+            
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 8</div>
+                <img src="images/lionn.webp" style="width:100%">
+                <div class="text"><b>Lion</b></div>
+              </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 8</div>
+              <img src="images/elephantt.jpg" style="width:100%">
+              <div class="text"><b>Elephant</b></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 8</div>
+              <img src="images/tiger.jpg" style="width:100%">
+              <div class="text"><b>Tiger</b></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 8</div>
+              <img src="images/giraffe.jpg" style="width:100%">
+              <div class="text"><b>Giraffe</b></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 8</div>
+                <img src="images/hippo.jpg" style="width:100%">
+                <div class="text"><b>Hippopotamus</b></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 8</div>
+                <img src="images/gorilla.webp" style="width:100%">
+                <div class="text"><b>Gorilla</b></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 8</div>
+                <img src="images/leo.jpg" style="width:100%">
+                <div class="text"><b>Leopard</b></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 8</div>
+                <img src="images/zebra.jpg" style="width:100%">
+                <div class="text"><b>Zebra</b></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img src="images/bear.avif" style="width:100%">
+                <div class="text"><b>Bear</b></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img src="images/panda.jpg" style="width:100%">
+                <div class="text"><b>Panda</b></div>
+            </div>
+          
+          
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+          </div>
+    </section>
+
+<script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+    <!-- animals -->
+
+    <section class="animal" id="fauna">
+
+        <h2 class="heading">Animal</h2>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/bengal.jpg" alt="">
+                <div class="content">
+                    <h3>Bengal tiger</h3>
+                    <a href="https://en.wikipedia.org/wiki/Bengal_tiger" class="btn">see details</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/z1.jpg" alt="">
+                <div class="content">
+                    <h3>Zebra</h3>
+                    <a href="https://en.wikipedia.org/wiki/Zebra" class="btn">see details</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/polar.avif" alt="">
+                <div class="content">
+                    <h3>Polar Bear</h3>
+                    <a href="https://en.wikipedia.org/wiki/Polar_bear" class="btn">see details</a>
+                </div>
+            </div>
+
+        </div>
+
+      
+
+    </section>
+    
+
+        <section class="about" id="about">
+            <h1>About Us</h1>
+            <p>Animals World is a virtual zoo for you to explore about animals</p>
+        </section>
+
+
+
+</body>
+</html>
