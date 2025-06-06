@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".main_page">
+
+        <!-- Title & Icons -->
+        <ImageView
+            android:id="@+id/imageIcon1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+            app:tint="#1A1717"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textDelicious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delicious"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/imageIcon1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textEasy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy to cook menu"
+            android:textSize="20sp"
+            android:textColor="#FDC007"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/textDelicious"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/textCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textEasy"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp" />
+
+        <!-- Category Buttons -->
+        <Button
+            android:id="@+id/buttonAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:backgroundTint="#FDC007"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/textCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/buttonBreakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:backgroundTint="#9E999E"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@+id/buttonAll"
+            app:layout_constraintStart_toEndOf="@+id/buttonAll"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/buttonLunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunch"
+            android:backgroundTint="#9D989D"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@+id/buttonAll"
+            app:layout_constraintStart_toEndOf="@+id/buttonBreakfast"
+            android:layout_marginStart="8dp" />
+
+        <Button
+            android:id="@+id/buttonDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dinner"
+            android:backgroundTint="#9E999E"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@+id/buttonAll"
+            app:layout_constraintStart_toEndOf="@+id/buttonLunch"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/textPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAll"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp" />
+
+        <!-- Remen Item -->
+        <ImageView
+            android:id="@+id/imageRemen"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/remen"
+            app:layout_constraintTop_toBottomOf="@+id/textPopular"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textRemen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remen"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/imageRemen"
+            app:layout_constraintStart_toEndOf="@+id/imageRemen"
+            android:layout_marginStart="16dp" />
+
+        <!-- French Fries Item -->
+
+        <Button
+            android:id="@+id/buttonRemen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="124dp"
+            android:backgroundTint="#FDC007"
+            android:text="Let's Cook!!"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="@+id/textRemen"
+            app:layout_constraintTop_toBottomOf="@+id/textRemen" />
+
+        <ImageView
+            android:id="@+id/imageFries"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/french_fries"
+            app:layout_constraintTop_toBottomOf="@+id/imageRemen"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textFries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="French Fries"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/imageFries"
+            app:layout_constraintStart_toEndOf="@+id/imageFries"
+            android:layout_marginStart="16dp" />
+
+        <Button
+            android:id="@+id/buttonFries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="124dp"
+            android:backgroundTint="#FDC007"
+            android:text="Let's Cook!!"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.394"
+            app:layout_constraintStart_toStartOf="@+id/textFries"
+            app:layout_constraintTop_toBottomOf="@+id/textFries" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
