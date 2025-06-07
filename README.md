@@ -1,4 +1,4 @@
-#🍽️ Recipe Sharing Platform
+🍽️ Recipe Sharing Platform
 Welcome to the Recipe Sharing Platform, a cross-platform project designed to bring cooking enthusiasts together! Whether you're a professional chef or a home cook, our platform allows users to share, explore, and save recipes easily — via a responsive web application and a modern Android mobile app.
 
 🌐 Project Overview
